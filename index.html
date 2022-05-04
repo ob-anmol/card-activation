@@ -23,6 +23,10 @@
 			font-weight: bold;">
     </p>
     <p id="demo"></p>
+    <br>
+    <br>
+    <br>
+    <p id="demo1"></p>
     <script>
 		//HTMLDocument.prototype.e = document.getElementById;
 		//var el_up = document.e("GFG_UP");
@@ -48,8 +52,10 @@
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var userAgent1 = navigator;
     //console.log(userAgent);
     document.getElementById("demo").innerText = userAgent;
+    document.getElementById("demo1").innerText = userAgent1;
 
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
