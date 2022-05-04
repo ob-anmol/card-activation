@@ -27,62 +27,62 @@
     <br>
     <br>
     <p id="demo1"></p>
-	<br>
+    <br>
     <br>
     <br>
     <p id="demo2"></p>
     <script>
-		//HTMLDocument.prototype.e = document.getElementById;
-		//var el_up = document.e("GFG_UP");
-		//var el_down = document.e("GFG_DOWN");
-		//el_up.innerHTML = "Click on the button to get the OS of User's System.";
-		//var Name = "Not known";
-		//if (navigator.appVersion.indexOf("Win") != -1) Name =
-		//"Windows OS";
-		//if (navigator.appVersion.indexOf("Mac") != -1) Name =
-		//"MacOS";
-		//if (navigator.appVersion.indexOf("X11") != -1) Name =
-		//"UNIX OS";
-		//if (navigator.appVersion.indexOf("Linux") != -1) Name =
-		//"Linux OS";
+        //HTMLDocument.prototype.e = document.getElementById;
+        //var el_up = document.e("GFG_UP");
+        //var el_down = document.e("GFG_DOWN");
+        //el_up.innerHTML = "Click on the button to get the OS of User's System.";
+        //var Name = "Not known";
+        //if (navigator.appVersion.indexOf("Win") != -1) Name =
+        //"Windows OS";
+        //if (navigator.appVersion.indexOf("Mac") != -1) Name =
+        //"MacOS";
+        //if (navigator.appVersion.indexOf("X11") != -1) Name =
+        //"UNIX OS";
+        //if (navigator.appVersion.indexOf("Linux") != -1) Name =
+        //"Linux OS";
 
-		//function GFG_Fun() {
-		//	el_down.innerHTML = Name;
-		//}
+        //function GFG_Fun() {
+        //	el_down.innerHTML = Name;
+        //}
 
         function getDeviceOS() {
             document.getElementById("GFG_UP").innerText = getMobileOperatingSystem();
         }
 
-function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    var userAgent1 = navigator.appVersion;
-    //console.log(userAgent);
-    document.getElementById("demo").innerText = userAgent;
-    document.getElementById("demo1").innerText = userAgent1;
-	document.getElementById("demo2").innerText = navigator.platform;
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var userAgent1 = navigator.appVersion;
+            //console.log(userAgent);
+            document.getElementById("demo").innerText = userAgent;
+            document.getElementById("demo1").innerText = userAgent1;
+            document.getElementById("demo2").innerText = navigator.platform;
 
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
 
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
 
-    if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
-    if (/Windows/i.test(userAgent) && !window.MSStream) {
-        return "Windows";
-    }
-    if (/Macintosh/i.test(userAgent) && !window.MSStream) {
-        return "MACOS";
-    }
-    return "unknown";
-}
+            if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+            if (/Windows/i.test(userAgent) && !window.MSStream) {
+                return "Windows";
+            }
+            if (/Macintosh/i.test(userAgent) && !window.MSStream) {
+                return "MACOS";
+            }
+            return "unknown";
+        }
         window.onload = getDeviceOS;
-	</script>
+    </script>
 </body>
 
 </html>
@@ -115,57 +115,62 @@ function getMobileOperatingSystem() {
     <br>
     <br>
     <p id="demo1"></p>
+    <br>
+    <br>
+    <br>
+    <p id="demo2"></p>
     <script>
-		//HTMLDocument.prototype.e = document.getElementById;
-		//var el_up = document.e("GFG_UP");
-		//var el_down = document.e("GFG_DOWN");
-		//el_up.innerHTML = "Click on the button to get the OS of User's System.";
-		//var Name = "Not known";
-		//if (navigator.appVersion.indexOf("Win") != -1) Name =
-		//"Windows OS";
-		//if (navigator.appVersion.indexOf("Mac") != -1) Name =
-		//"MacOS";
-		//if (navigator.appVersion.indexOf("X11") != -1) Name =
-		//"UNIX OS";
-		//if (navigator.appVersion.indexOf("Linux") != -1) Name =
-		//"Linux OS";
+        //HTMLDocument.prototype.e = document.getElementById;
+        //var el_up = document.e("GFG_UP");
+        //var el_down = document.e("GFG_DOWN");
+        //el_up.innerHTML = "Click on the button to get the OS of User's System.";
+        //var Name = "Not known";
+        //if (navigator.appVersion.indexOf("Win") != -1) Name =
+        //"Windows OS";
+        //if (navigator.appVersion.indexOf("Mac") != -1) Name =
+        //"MacOS";
+        //if (navigator.appVersion.indexOf("X11") != -1) Name =
+        //"UNIX OS";
+        //if (navigator.appVersion.indexOf("Linux") != -1) Name =
+        //"Linux OS";
 
-		//function GFG_Fun() {
-		//	el_down.innerHTML = Name;
-		//}
+        //function GFG_Fun() {
+        //	el_down.innerHTML = Name;
+        //}
 
         function getDeviceOS() {
             document.getElementById("GFG_UP").innerText = getMobileOperatingSystem();
         }
 
-function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    var userAgent1 = navigator.appVersion;
-    //console.log(userAgent);
-    document.getElementById("demo").innerText = userAgent;
-    document.getElementById("demo1").innerText = userAgent1;
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var userAgent1 = navigator.appVersion;
+            //console.log(userAgent);
+            document.getElementById("demo").innerText = userAgent;
+            document.getElementById("demo1").innerText = userAgent1;
+            document.getElementById("demo2").innerText = navigator.platform;
 
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
 
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
 
-    if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
-    if (/Windows/i.test(userAgent) && !window.MSStream) {
-        return "Windows";
-    }
-    if (/Macintosh/i.test(userAgent) && !window.MSStream) {
-        return "MACOS";
-    }
-    return "unknown";
-}
+            if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+            if (/Windows/i.test(userAgent) && !window.MSStream) {
+                return "Windows";
+            }
+            if (/Macintosh/i.test(userAgent) && !window.MSStream) {
+                return "MACOS";
+            }
+            return "unknown";
+        }
         window.onload = getDeviceOS;
-	</script>
+    </script>
 </body>
 
 </html>
