@@ -22,6 +22,7 @@
 			font-size: 24px;
 			font-weight: bold;">
     </p>
+    <p id="demo"></p>
     <script>
 		//HTMLDocument.prototype.e = document.getElementById;
 		//var el_up = document.e("GFG_UP");
@@ -47,7 +48,8 @@
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    console.log(userAgent);
+    //console.log(userAgent);
+    document.getElementById("demo").innerText = userAgent;
 
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
@@ -61,6 +63,9 @@ function getMobileOperatingSystem() {
         return "iOS";
     }
     if (/Windows/i.test(userAgent) && !window.MSStream) {
+        return "Windows";
+    }
+    if (/Macintosh/i.test(userAgent) && !window.MSStream) {
         return "Windows";
     }
     return "unknown";
