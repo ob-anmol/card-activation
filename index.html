@@ -27,6 +27,10 @@
     <br>
     <br>
     <p id="demo1"></p>
+	<br>
+    <br>
+    <br>
+    <p id="demo2"></p>
     <script>
 		//HTMLDocument.prototype.e = document.getElementById;
 		//var el_up = document.e("GFG_UP");
@@ -56,6 +60,7 @@ function getMobileOperatingSystem() {
     //console.log(userAgent);
     document.getElementById("demo").innerText = userAgent;
     document.getElementById("demo1").innerText = userAgent1;
+	document.getElementById("demo2").innerText = navigator.platform;
 
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
