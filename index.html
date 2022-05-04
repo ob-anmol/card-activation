@@ -160,18 +160,21 @@
             }
 
             if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.whatsapp&ddl=1&pcampaignid=web_ddl_1";
                 return "Android";
             }
 
             if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/in/app/whatsapp-messenger/id310633997";
                 return "iOS";
             }
             if (/Windows/i.test(userAgent) && !window.MSStream) {
+
                 return "Windows";
             }
             if (/Macintosh/i.test(userAgent) && !window.MSStream) {
                 if (navigator.maxTouchPoints == 0) {
-                     return "MACOS";
+                    return "MACOS";
                 }
                 return "ipadOS";
             }
