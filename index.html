@@ -47,6 +47,7 @@
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    console.log(userAgent);
 
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
@@ -56,10 +57,12 @@ function getMobileOperatingSystem() {
         return "Android";
     }
 
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
         return "iOS";
     }
-
+    if (/Windows/i.test(userAgent) && !window.MSStream) {
+        return "Windows";
+    }
     return "unknown";
 }
         window.onload = getDeviceOS;
