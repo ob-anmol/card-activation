@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 
 <head>
@@ -9,14 +9,12 @@
 </head>
 
 <body style="text-align:center;" id="body">
-    <h1 style="color:green;">
-        GeeksForGeeks
-    </h1>
+
     <p id="GFG_UP"
        style="font-size: 19px;
 			font-weight: bold;">
     </p>
-    <button onclick="GFG_Fun()">
+    <button onclick="getDeviceOS()">
         click here
     </button>
     <p id="GFG_DOWN"
@@ -25,24 +23,47 @@
 			font-weight: bold;">
     </p>
     <script>
-		HTMLDocument.prototype.e = document.getElementById;
-		var el_up = document.e("GFG_UP");
-		var el_down = document.e("GFG_DOWN");
-		el_up.innerHTML = "Click on the button to get the OS of User's System.";
-		var Name = "Not known";
-		if (navigator.appVersion.indexOf("Win") != -1) Name =
-		"Windows OS";
-		if (navigator.appVersion.indexOf("Mac") != -1) Name =
-		"MacOS";
-		if (navigator.appVersion.indexOf("X11") != -1) Name =
-		"UNIX OS";
-		if (navigator.appVersion.indexOf("Linux") != -1) Name =
-		"Linux OS";
+		//HTMLDocument.prototype.e = document.getElementById;
+		//var el_up = document.e("GFG_UP");
+		//var el_down = document.e("GFG_DOWN");
+		//el_up.innerHTML = "Click on the button to get the OS of User's System.";
+		//var Name = "Not known";
+		//if (navigator.appVersion.indexOf("Win") != -1) Name =
+		//"Windows OS";
+		//if (navigator.appVersion.indexOf("Mac") != -1) Name =
+		//"MacOS";
+		//if (navigator.appVersion.indexOf("X11") != -1) Name =
+		//"UNIX OS";
+		//if (navigator.appVersion.indexOf("Linux") != -1) Name =
+		//"Linux OS";
 
-		function GFG_Fun() {
-			el_down.innerHTML = Name;
-		}
-    </script>
+		//function GFG_Fun() {
+		//	el_down.innerHTML = Name;
+		//}
+
+        function getDeviceOS() {
+            document.getElementById("GFG_UP").innerText = getMobileOperatingSystem();
+        }
+
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+        window.onload = getDeviceOS;
+	</script>
 </body>
 
 </html>
