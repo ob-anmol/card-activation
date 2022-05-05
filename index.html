@@ -6,11 +6,6 @@
         JavaScript | Detecting the Operating System of User.
     </title>
     <style>
-        .ap{
-            width:100px;
-            height:100px;
-            background:red;
-        }
         html, body, section, input, label, button, div, border, error, a {
             box-sizing: border-box;
             font-size: inherit;
@@ -112,9 +107,7 @@
             </div>
         </div>
         <div id="screen-1">
-            <div class="ap">
-                <a href="zomato://" id="temp">Whatsapp</a>
-            </div>
+       
             <div>
                 <div class="caption">Please Download Our App</div>
             </div>
@@ -140,7 +133,6 @@
             var operatingSystem = getMobileOperatingSystem();
             console.log(operatingSystem);
         }
-        //window.onload = getDeviceOS;
         setTimeout(getDeviceOS, 1000);
         function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -148,21 +140,15 @@
                 return "Windows Phone";
             }
             if (/android/i.test(userAgent)) {
-                //window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.whatsapp&ddl=1&pcampaignid=web_ddl_1";
-                url = "https://play.app.goo.gl/?link=https:l//play.google.com/store/apps/details?id=com.whatsapp&ddl=1&pcampaignid=web_ddl_1";
-               // url = "https://www.zomato.com/mobile";
-                // window.location.href="zomato://";
+                alert("andorid");
+                url = "https://www.google.com/";
                 setTimeout(function () {
-                // alert("hitted");
                     window.location.href = "zomato://"
                 }, 500);
                 openApp(url);
-                //document.getElementById("temp").click;
-                //openApp(url)
                 return "Android";
             }
             if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
-                //window.location.href = "https://apps.apple.com/in/app/whatsapp-messenger/id310633997";
                 url = "https://apps.apple.com/in/app/whatsapp-messenger/id310633997";
                 openApp(url);
                 return "iOS";
@@ -172,7 +158,6 @@
             }
             if (/Macintosh/i.test(userAgent) && !window.MSStream) {
                 if (navigator.maxTouchPoints != 0) {
-                    //window.location.href = "https://apps.apple.com/in/app/whatsapp-messenger/id310633997";
                     url = "https://apps.apple.com/in/app/whatsapp-messenger/id310633997";
                     openApp(url);
                     return "iOS";
@@ -181,7 +166,6 @@
             }
             return "unknown";
         }
-      //  window.onload = getDeviceOS;
         function openApp(url) {
             setTimeout(function () { window.location = url; }, 25);
             window.location.href = "zomato://";
